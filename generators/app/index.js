@@ -47,10 +47,7 @@ module.exports = class extends Generator {
     this.fs.copyTpl(
       this.templatePath('element'),
       this.destinationPath(),
-      {
-        ...this.answers,
-        year: (new Date).getFullYear()
-      },
+      this.answers,
       null,
       { globOptions: { dot: true } }
     )
