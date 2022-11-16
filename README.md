@@ -2,6 +2,9 @@
 
 Generate [Polymer 1.x][polymer-1] elements with HTTPS support
 
+**Important:** The generated elements aren't set up to be published to the [Polymer Elements][polymer-elements] registry.
+This only generates elements meant for demo/preview purposes.
+
 ## Install
 
 ```bash
@@ -49,5 +52,6 @@ MIT
 [@nicholaswmin][nicholasmin]
 
 [polymer-1]: https://polymer-library.polymer-project.org/1.0/docs/about_10
+[polymer-elements]: https://www.webcomponents.org/author/PolymerElements
 [heroku]: https://heroku.com
 [nicholasmin]: https://github.com/nicholaswmin
