@@ -54,6 +54,7 @@ module.exports = class extends Generator {
 
     this.fs.commit([], () => {
       fs.renameSync(`${dest}/sample-element.html`, `${dest}/${this.answers.element_name}.html`)
+      fs.renameSync(`${dest}/gitignore`, `${dest}/.gitignore`)
       this.spawnCommand('npm', ['install'], { cwd: this.answers.element_name })
     })
   }
