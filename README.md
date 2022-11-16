@@ -30,8 +30,8 @@ You need to *locally* trust the SSL certificate:
 - Go into the Certificates section and locate the certificate you just added
 - Double click on it, enter the trust section and under "When using this certificate" select "Always Trust".
 
-You don't need to always the certificate of every generated element.
-Just do it once and it should work for all generated elements.
+You don't need to trust this certificate for *every* generated element.
+Trust it once and it will work for all subsequent generated elements.
 
 ## Deploy
 
