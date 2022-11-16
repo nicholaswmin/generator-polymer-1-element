@@ -47,7 +47,9 @@ module.exports = class extends Generator {
       {
         ...this.answers,
         year: (new Date).getFullYear()
-      }
+      },
+      null,
+      { globOptions: { dot: true } }
     )
 
     this.fs.commit([], () => {
