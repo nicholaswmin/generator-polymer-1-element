@@ -1,0 +1,33 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<dom-module id="<%= element_name %>">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <h3><%= element_name %> says: [[prop]]</h3>
+  </template>
+
+  <script>
+    'use strict'
+
+    Polymer({
+
+      is: '<%= element_name %>',
+
+      properties: {
+        prop: {
+          type: 'String',
+          value: 'Hello World!'
+        }
+      },
+
+      attached: function() {
+        window.element = this
+      }
+    })
+  </script>
+</dom-module>

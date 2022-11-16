@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title><%= element_name %> demo</title>
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="icon" href="data:,">
+    <link rel="import" href="<%= element_name %>.html">
+
+    <style>
+      html,
+      body {
+        font-family: sans-serif;
+      }
+
+      .demo-container {
+        max-width: 540px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-container">
+      <template is="dom-bind">
+        <<%= element_name %>></<%= element_name %>>
+      </template>
+    </div>
+  </body>
+</html>

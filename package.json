@@ -1,0 +1,14 @@
+{
+  "name": "generator-polymer-1-element",
+  "version": "0.1.0",
+  "description": "Generate Polymer 1.x elements with local HTTPS support",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.0.0"
+  }
+}
