@@ -1,7 +1,13 @@
 {
   "name": "generator-polymer-1-element",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Generate Polymer 1.x elements with local HTTPS support",
+  "author": "@nicholaswmin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholaswmin/generator-polymer-1-element/issues"
+  },
+  "homepage": "https://github.com/nicholaswmin/generator-polymer-1-element#readme",
   "files": [
     "generators"
   ],

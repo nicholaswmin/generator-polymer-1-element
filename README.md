@@ -5,6 +5,7 @@ Generate [Polymer 1.x][polymer-1] elements with HTTPS support
 ## Install
 
 ```bash
+$ npm install -g yo
 $ npm install -g generator-polymer-1-element
 ```
 
