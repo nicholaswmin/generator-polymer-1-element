@@ -39,11 +39,14 @@ module.exports = class extends Generator {
     this.log('Generating element:', this.answers.element_name)
   }
 
+  install() {
+    this.npmInstall()
+  }
+
   writing() {
-    const dest = this.destinationPath(this.answers.element_name)
     this.fs.copyTpl(
       this.templatePath('element'),
-      this.destinationPath(this.answers.element_name),
+      this.destinationPath(),
       {
         ...this.answers,
         year: (new Date).getFullYear()
@@ -53,9 +56,7 @@ module.exports = class extends Generator {
     )
 
     this.fs.commit([], () => {
-      fs.renameSync(`${dest}/sample-element.html`, `${dest}/${this.answers.element_name}.html`)
-      fs.renameSync(`${dest}/gitignore`, `${dest}/.gitignore`)
-      this.spawnCommand('npm', ['install'], { cwd: this.answers.element_name })
+      fs.renameSync(`sample-element.html`, `${this.answers.element_name}.html`)
     })
   }
 };

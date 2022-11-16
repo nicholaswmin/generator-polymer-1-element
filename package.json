@@ -1,6 +1,6 @@
 {
   "name": "generator-polymer-1-element",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate Polymer 1.x elements with local HTTPS support",
   "author": "@nicholaswmin",
   "license": "MIT",

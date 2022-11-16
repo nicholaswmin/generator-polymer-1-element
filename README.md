@@ -9,6 +9,10 @@ $ npm install -g yo
 $ npm install -g generator-polymer-1-element
 ```
 
+## Create repo
+
+Create the Github repository, clone it and `cd` into it.
+
 ## Generate element
 
 ```bash
