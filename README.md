@@ -11,6 +11,7 @@ npm i -g yo generator-polymer-1-element
 ## Create repo
 
 Create the Github repository, clone it and `cd` into it.
+Select a License and a Node `.gitignore` when creating the repository.
 
 ## Generate element
 
