@@ -16,7 +16,6 @@ Create the Github repository, clone it and `cd` into it.
 
 ```bash
 yo polymer-1-element
-# and follow the instructions
 ```
 
 ## Trust the local SSL certificate

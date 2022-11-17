@@ -9,8 +9,9 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'element_name',
-        message: 'Type the element name',
+        message: 'Type the element name:',
         default: this.appname,
+        transformer: input => input.trim(),
         validate: input => {
           if (input.split('-').length <= 1)
             return 'Element name must contain at least 2 words separated by a hyphen (i.e hello-world).'
@@ -21,17 +22,20 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'element_description',
-        message: 'Type the element description'
+        message: 'Type the element description:',
+        transformer: input => input.trim()
       },
       {
         type: 'input',
         name: 'author',
-        message: 'Type the Github author handle',
-        validate: input => {
-          if (input.includes('@'))
-            return "Do not include @ in author name. We'll generate it for you."
+        message: 'Type your Github username:',
+        transformer: input => {
+          input = input.trim()
 
-          return true
+          if (input[0] === '@')
+            input = input.slice(1, input.length)
+
+          return input
         }
       },
     ])
