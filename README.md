@@ -8,7 +8,7 @@ Generate [Polymer 1.x][polymer-1] elements with HTTPS support
 npm i -g yo generator-polymer-1-element
 ```
 
-## Create repo
+## Create a Github repository
 
 Create the Github repository, clone it and `cd` into it.
 Select a License and a Node `.gitignore` when creating the repository.
@@ -31,6 +31,18 @@ You need to *locally* trust the SSL certificate:
 
 You don't need to trust this certificate for *every* generated element.
 Trust it once and it will work for all subsequent generated elements.
+
+## Develop
+
+The element is `element-name.html` in the root directory of the generated element.
+
+## Run
+
+```bash
+npm run start-dev
+```
+
+and visit https://localhost:5020
 
 ## Deploy
 
