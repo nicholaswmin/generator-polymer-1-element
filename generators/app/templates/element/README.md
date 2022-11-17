@@ -40,6 +40,9 @@ npm test
 
 Unit tests are currently only run on Firefox due to a Chrome issue.
 
+You can also run tests in any browser by visiting https://localhost:5020/test while `$ npm run start-dev` is running.
+The test results are in the browser console.
+
 ## Deploy
 
 This element is set up to be deployed on [Heroku][heroku].

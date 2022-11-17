@@ -15,6 +15,8 @@ const server = argv['disable-local-ssl'] ?
     cert: fs.readFileSync('ssl/dev/server.crt', 'utf8')
   }, app)
 
+app.set('port', (process.env.PORT || 5020))
+
 app.use(
   '/bower_components',
   express.static(path.resolve(__dirname, 'bower_components'))
@@ -23,8 +25,9 @@ app.use('/', express.static(path.resolve(__dirname, './')))
 app.get('/', async (req, res, next) => {
   res.sendFile(path.resolve(__dirname, 'index.html'))
 })
-
-app.set('port', (process.env.PORT || 5020))
+app.get('/test', async (req, res, next) => {
+  res.sendFile(path.resolve(__dirname, 'test/<%= element_name %>_test.html'))
+})
 
 server.listen(app.get('port'), () => {
   console.info(
