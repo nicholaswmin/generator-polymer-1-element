@@ -28,7 +28,7 @@ The element is `<%= element_name %>.html` in the root directory of this project.
 npm run start-dev
 ```
 
-and visit: https://localhost:5020
+and visit: https://localhost:<%= port %>
 
 ## Test
 
@@ -40,7 +40,7 @@ npm test
 
 Unit tests are currently only run on Firefox due to a Chrome issue.
 
-You can also run tests in any browser by visiting https://localhost:5020/test while `$ npm run start-dev` is running.
+You can also run tests in any browser by visiting https://localhost:<%= port %>/test while `$ npm run start-dev` is running.
 The test results are in the browser console.
 
 ## Deploy

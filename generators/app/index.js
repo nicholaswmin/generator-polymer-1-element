@@ -40,6 +40,21 @@ module.exports = class extends Generator {
         name: 'license',
         message: 'Type the license type (e.g MIT):',
         validate: input => !input ? 'Must enter a license type' : true
+      },
+      {
+        type: 'input',
+        name: 'port',
+        message: 'Enter the port to bind to for viewing the element (e.g 5021):',
+        default: Math.floor(Math.random() * (5099 - 5020 + 1)) + 5020,
+        validate: input => {
+          if (!input)
+            return 'Must enter a port'
+
+          if (!(port >= 5020 && port <= 5099))
+            return 'Port must be a Number between 5020 - 5099'
+
+          return true
+        }
       }
     ])
 

@@ -15,7 +15,7 @@ const server = argv['disable-local-ssl'] ?
     cert: fs.readFileSync('ssl/dev/server.crt', 'utf8')
   }, app)
 
-app.set('port', (process.env.PORT || 5020))
+app.set('port', (process.env.PORT || <%= port %>))
 
 app.use(
   '/bower_components',
