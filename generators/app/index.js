@@ -50,7 +50,7 @@ module.exports = class extends Generator {
           if (!input)
             return 'Must enter a port'
 
-          if (!(port >= 5020 && port <= 5099))
+          if (!(input >= 5020 && input <= 5099))
             return 'Port must be a Number between 5020 - 5099'
 
           return true
