@@ -9,8 +9,7 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'element_name',
-        message: 'Type the element name:',
-        default: this.appname,
+        message: 'Type the element name (e.g hello-world):',
         filter: input => input.trim(),
         validate: input => {
           if (!input)
