@@ -2,14 +2,10 @@
 
 Generate [Polymer 1.x][polymer-1] elements with HTTPS support
 
-**Important:** The generated elements aren't set up to be published to the [Polymer Elements][polymer-elements] registry.
-This only generates elements meant for demo/preview purposes.
-
 ## Install
 
 ```bash
-$ npm install -g yo
-$ npm install -g generator-polymer-1-element
+npm i -g yo generator-polymer-1-element
 ```
 
 ## Create repo
@@ -19,7 +15,7 @@ Create the Github repository, clone it and `cd` into it.
 ## Generate element
 
 ```bash
-$ yo polymer-1-element
+yo polymer-1-element
 # and follow the instructions
 ```
 
@@ -27,10 +23,10 @@ $ yo polymer-1-element
 
 You need to *locally* trust the SSL certificate:
 
-- You can find the certificates in `/ssl` folder of the generated element.
-- Open up Keychain Access. You can get to it from `Application/Utilities/Keychain Access.app`.
+- You can find the certificates in the `/ssl` folder of the generated element.
+- Open up Keychain Access. You can find it as `Application/Utilities/Keychain Access.app`.
 - Drag your certificate into Keychain Access.
-- Go into the Certificates section and locate the certificate you just added
+- Go into the Certificates section and locate the certificate you just added.
 - Double click on it, enter the trust section and under "When using this certificate" select "Always Trust".
 
 You don't need to trust this certificate for *every* generated element.
