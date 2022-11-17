@@ -15,7 +15,7 @@ You need to locally trust the SSL certificates in this project:
 ## Install
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Develop
@@ -25,9 +25,10 @@ The element is `<%= element_name %>.html` in the root directory of this project.
 ## Run
 
 ```bash
-$ npm run start-dev
-# and visit: https://localhost:5020
+npm run start-dev
 ```
+
+and visit: https://localhost:5020
 
 ## Deploy
 
