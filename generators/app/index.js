@@ -13,10 +13,10 @@ module.exports = class extends Generator {
         filter: input => input.trim(),
         validate: input => {
           if (!input)
-            return 'Must enter a name (e.g hello-world)'
+            return 'Must enter a name'
 
           if (input.split('-').length <= 1)
-            return 'Name must contain at least 2 words separated with hyphen (e.g hello-world).'
+            return 'Name must contain at least 2 words separated with hyphen (e.g hello-world)'
 
           return true
         }
