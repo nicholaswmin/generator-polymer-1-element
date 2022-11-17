@@ -12,7 +12,15 @@ module.exports = class extends Generator {
         message: 'Type the element name:',
         default: this.appname,
         filter: input => input.trim(),
-        validate: input => !input ? 'Must enter a name' : true
+        validate: input => {
+          if (!input)
+            return 'Must enter a name'
+
+          if (input.split('-').length <= 1)
+            return 'Name must contain at least 2 words separated with hyphen (i.e hello-world).'
+
+          return true
+        }
       },
       {
         type: 'input',
