@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title><%= element_name %> test</title>
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="/bower_components/web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../<%= element_name %>.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <<%= element_name %>></<%= element_name %>>
+      </template>
+    </test-fixture>
+
+    <script>
+      chai.should()
+
+      let element
+
+      beforeEach(() => {
+        element = fixture('basic')
+      })
+
+      describe('Element instantiation', () => {
+        it('instantiating the element works', () => {
+          assert.equal(element.is, '<%= element_name %>')
+        })
+      })
+
+      describe('#saysHello()', () => {
+        it('returns "hello"', () => {
+          const answer = element.sayHello()
+
+          answer.should.equal('hello!')
+        })
+      })
+    </script>
+  </body>
+</html>

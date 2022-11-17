@@ -14,10 +14,10 @@ module.exports = class extends Generator {
         filter: input => input.trim(),
         validate: input => {
           if (!input)
-            return 'Must enter a name'
+            return 'Must enter a name (e.g hello-world)'
 
           if (input.split('-').length <= 1)
-            return 'Name must contain at least 2 words separated with hyphen (i.e hello-world).'
+            return 'Name must contain at least 2 words separated with hyphen (e.g hello-world).'
 
           return true
         }
@@ -36,6 +36,12 @@ module.exports = class extends Generator {
         filter: input => input.trim().replaceAll('@', ''),
         validate: input => !input ? 'Must enter a username' : true
       },
+      {
+        type: 'input',
+        name: 'license',
+        message: 'Type the license type (e.g MIT):',
+        validate: input => !input ? 'Must enter a license type' : true
+      }
     ])
 
     this.log('Generating element:', this.answers.element_name)
@@ -56,6 +62,7 @@ module.exports = class extends Generator {
 
     this.fs.commit([], () => {
       fs.renameSync(`sample-element.html`, `${this.answers.element_name}.html`)
+      fs.renameSync(`test/sample-element_test.html`, `test/${this.answers.element_name}_test.html`)
     })
   }
 };

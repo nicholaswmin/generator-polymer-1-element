@@ -30,6 +30,16 @@ npm run start-dev
 
 and visit: https://localhost:5020
 
+## Test
+
+Ensure you have the latest [Firefox][firefox] installed, then:
+
+```bash
+npm test
+```
+
+Unit tests are currently only run on Firefox due to a Chrome issue.
+
 ## Deploy
 
 This element is set up to be deployed on [Heroku][heroku].
@@ -45,5 +55,6 @@ MIT
 
 [@<%= author %>][<%= author %>]
 
+[firefox]: https://firefox.com
 [heroku]: https://heroku.com
 [<%= author %>]: https://github.com/<%= author %>

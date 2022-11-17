@@ -44,6 +44,16 @@ npm run start-dev
 
 and visit https://localhost:5020
 
+## Test
+
+Ensure you have the latest [Firefox][firefox] installed, then:
+
+```bash
+npm test
+```
+
+Unit tests are currently only run on Firefox due to a Chrome issue.
+
 ## Deploy
 
 The generated element is set up to be deployed on [Heroku][heroku].
@@ -61,5 +71,6 @@ MIT
 
 [polymer-1]: https://polymer-library.polymer-project.org/1.0/docs/about_10
 [polymer-elements]: https://www.webcomponents.org/author/PolymerElements
+[firefox]: https://firefox.com
 [heroku]: https://heroku.com
 [nicholasmin]: https://github.com/nicholaswmin

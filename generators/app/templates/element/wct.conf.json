@@ -1,0 +1,19 @@
+{
+  "verbose": false,
+  "plugins": {
+    "sauce": {
+      "disabled": true
+    },
+    "local": {
+      "disabled": false,
+      "browsers": [
+        "firefox"
+      ],
+      "browsersOptions": {
+        "firefox": [
+          "-headless"
+        ]
+      }
+    }
+  }
+}

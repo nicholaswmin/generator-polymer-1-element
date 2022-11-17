@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js --disable-local-ssl=true",
     "start-dev": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules/web-component-tester/bin/wct",
     "postinstall": "bower install"
   },
   "repository": {
@@ -19,7 +19,7 @@
     "element"
   ],
   "author": "@<%= author %>",
-  "license": "MIT",
+  "license": "<%= license %>",
   "bugs": {
     "url": "https://github.com/<%= author %>/<%= element_name %>/issues"
   },
@@ -28,5 +28,8 @@
     "express": "^4.17.1",
     "https": "^1.0.0",
     "nomnom": "^1.8.1"
+  },
+  "devDependencies": {
+    "web-component-tester": "^6.9.2"
   }
 }
